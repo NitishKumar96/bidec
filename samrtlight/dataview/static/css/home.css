@@ -1,0 +1,113 @@
+body, html
+{
+    height: 100%;
+    /*background-color: black;*/
+
+}
+
+.fixedBackground1
+{
+    background-image: url('lights.jpg');
+    height: 100%;
+    background-attachment: fixed;       /*background must be fixed for parallax to take place*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;/*Scale the background image to be as large as possible so that the background area is completely covered*/
+}
+.fixedBackground2
+{
+    background-image: url('lightbulb.jpg');
+    height: 100%;
+    /*background-attachment: fixed;       /*background must be fixed for parallax to take place*/*/
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-size: cover;/*Scale the background image to be as large as possible so that the background area is completely covered*/
+}
+#bodyContent
+{
+  padding : 50px;
+  /*background :#000;*/
+  /*color : #dddddd;*/
+  line-height: 40px;
+}
+
+.graph {
+  display: flex;
+  flex-direction:column;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
+}
+.graph{
+  padding-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #ffffff;
+  margin-bottom: 1%;
+  margin-right: : 40;
+  /*min-height: 150px;*/
+  width: 900px;
+}
+
+
+
+.heading{
+margin: 0;
+/*margin-bottom:30px;*/
+padding-right:220;
+padding-left: 335;
+padding-top: 200;
+Font-family:'Great Vibes',cursive;
+Color:#fff;
+font-size:150px;
+font-style: italic;
+line-height:75px;
+font-weight:200;
+letter-spacing:0;
+text-transform:none;
+}
+
+.text{
+  font-family:'Great Vibes', cursive;
+  padding : 50px;
+  background :rgba(0, 0, 9, 0.8);
+  color : #dddddd;
+  line-height: 30px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.button {
+  flex: 1 1 auto;
+  margin: 10px;
+  padding: 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+  }
+
+.graph{
+  padding:100;
+
+}

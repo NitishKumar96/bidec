@@ -1,0 +1,58 @@
+{%load staticfiles%}
+{% include 'dataview/css.html' %}
+{% include 'dataview/bootstrap_defaults.html' %}
+{% include 'dataview/js.html' %}
+{% load arduino_tag %}
+
+<html>
+<head>
+<link rel = "stylesheet" type = "text/css" href = '{%static "css/home.css"%}'>
+
+</head>
+<body>
+
+<!-- <div id="homePageTop" class="fixedBackground1">
+  <div> <h1 class="heading">Smart<br><br>Light </h1></div>
+</div> -->
+{%block content%}
+<div id="bodyContent" >
+
+  <div >
+
+      <!-- a graph to show the power used -->
+      <div class="graph">
+        <h1>current graph</h1>
+      <canvas id="current" width="900" height="150"></canvas>
+      </div>
+
+      <!-- a graph for the pole informations -->
+      <div class="graph">
+        <h1>Poles data</h1>
+      <canvas id="pole" width="900" height="150"></canvas>
+      <!-- <p>{{data_arduino}}</p> -->
+      </div>
+
+
+  </div>
+{%endblock%}
+
+
+<p id="in_waiting"> </p>
+<p id="i"> </p>
+<p> {{flag}}</p>
+{% for flag in true_flag %}
+  {% serial_tag as tag_in  %}
+
+  <p>{{ tag_in.datalog_last.voltage }}</p>
+  <p>{{ tag_in.num}}</p>
+
+{%endfor%}
+
+
+
+</div>
+
+
+
+</body>
+</html>
